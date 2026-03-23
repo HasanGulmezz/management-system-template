@@ -2,7 +2,7 @@
 
 Modern, hızlı ve markalaştırılabilir bir yönetim/stok/cari takip sistemi şablonu. React, TypeScript, Vite ve Supabase altyapısı kullanılarak geliştirilmiştir. Desktop uygulaması desteği de mevcuttur (Electron).
 
-> **💡 Canlı Demo:** [Vercel Demo Linki Buraya Gelecek]
+> **💡 Canlı Demo:** https://management-system-template.vercel.app/
 
 ## Özellikler
 
