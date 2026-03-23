@@ -1,0 +1,141 @@
+/* Purchase History Component Styles */
+
+.purchase-history {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.purchases-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  align-items: center;
+  padding: var(--space-4);
+}
+
+.purchases-list {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Purchase Card Wrapper - for layout with info button */
+.purchase-card-wrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+  transition: background-color var(--transition-fast);
+}
+
+.purchase-card-wrapper:last-child {
+  border-bottom: none;
+}
+
+.purchase-card-wrapper:hover {
+  background: var(--color-bg-secondary);
+}
+
+/* Purchase Card - clickable area */
+.purchase-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex: 1;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.purchase-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, #ef4444 0%, #b91c1c 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.purchase-info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.purchase-wholesaler {
+  font-weight: 600;
+  color: var(--color-text-primary);
+  font-size: 0.95rem;
+  text-decoration: underline;
+  text-decoration-color: var(--color-primary);
+}
+
+.purchase-date {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.purchase-amount-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.purchase-amount {
+  font-weight: 700;
+  color: var(--color-primary);
+  font-size: 0.95rem;
+}
+
+.purchase-item-count {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+/* Info button */
+.btn-icon-soft {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: var(--color-bg-tertiary);
+  color: var(--color-text-secondary);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.btn-icon-soft:hover {
+  background: var(--color-primary);
+  color: white;
+}
+
+.btn-icon-soft.info-btn:hover {
+  background: var(--color-primary);
+}
+
+/* Empty state */
+.purchase-history .empty-state {
+  padding: var(--space-8);
+  text-align: center;
+}
+
+/* Loading */
+.purchase-history .loading-container {
+  display: flex;
+  justify-content: center;
+  padding: var(--space-12);
+}

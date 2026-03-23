@@ -1,0 +1,379 @@
+.wholesaler-detail {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: color var(--transition-fast);
+}
+
+.back-link:hover {
+  color: var(--color-accent-primary);
+}
+
+.loading-container,
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  padding: var(--space-12);
+}
+
+/* Detail Header */
+.detail-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  flex-wrap: wrap;
+}
+
+.detail-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, #ecc94b 0%, #d69e2e 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.detail-info {
+  flex: 1;
+}
+
+.detail-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: var(--space-2);
+}
+
+.detail-contact,
+.detail-phone,
+.detail-date {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+  margin-bottom: var(--space-1);
+}
+
+.detail-stats {
+  display: flex;
+  gap: var(--space-4);
+}
+
+.stat-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--space-4);
+  background: var(--color-bg-primary);
+  border-radius: var(--radius-lg);
+  min-width: 100px;
+}
+
+.stat-box.highlight {
+  background: var(--color-accent-gradient);
+  color: white;
+}
+
+.stat-box.highlight.warning {
+  background: linear-gradient(135deg, #ecc94b 0%, #d69e2e 100%);
+}
+
+.stat-box .stat-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.stat-box .stat-label {
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
+/* Section */
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+/* Purchase List */
+.purchases-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.purchase-card {
+  padding: var(--space-4);
+}
+
+.purchase-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-3);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.purchase-date {
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+}
+
+.purchase-total {
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: var(--color-warning);
+}
+
+.purchase-items {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.purchase-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-2);
+  background: var(--color-bg-primary);
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+}
+
+.purchase-item svg {
+  color: var(--color-text-muted);
+}
+
+.item-name {
+  flex: 1;
+}
+
+.item-qty {
+  color: var(--color-text-muted);
+}
+
+.item-price {
+  font-weight: 600;
+  color: var(--color-warning);
+}
+
+@media (max-width: 768px) {
+  .detail-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .detail-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .detail-stats {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Delete Button */
+.delete-btn {
+  align-self: flex-start;
+}
+
+.btn-danger {
+  background: rgba(245, 101, 101, 0.1);
+  border: 1px solid var(--color-error);
+  color: var(--color-error);
+}
+
+.btn-danger:hover:not(:disabled) {
+  background: var(--color-error);
+  color: white;
+}
+
+/* Confirmation Modal */
+.confirm-modal {
+  max-width: 400px;
+  text-align: center;
+  padding: var(--space-8);
+}
+
+.confirm-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto var(--space-4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(245, 101, 101, 0.1);
+  border-radius: var(--radius-full);
+  color: var(--color-error);
+}
+
+.confirm-modal h3 {
+  margin-bottom: var(--space-3);
+  font-size: 1.25rem;
+}
+
+.confirm-text {
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-6);
+}
+
+.warning-text {
+  display: block;
+  margin-top: var(--space-2);
+  color: var(--color-warning);
+  font-size: 0.875rem;
+}
+
+.confirm-actions {
+  display: flex;
+  gap: var(--space-3);
+  justify-content: center;
+}
+
+/* Debt Section */
+.debt-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.debt-info {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.debt-info svg {
+  color: var(--color-warning);
+}
+
+.debt-label {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+}
+
+.debt-amount {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.debt-amount.has-debt {
+  color: var(--color-warning);
+}
+
+.debt-amount.no-debt {
+  color: var(--color-success);
+}
+
+.btn-warning {
+  background: var(--color-warning);
+  color: #1a1a2e;
+}
+
+.btn-warning:hover:not(:disabled) {
+  filter: brightness(1.1);
+}
+
+.btn-warning:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-slideUp {
+  animation: slideUp 0.3s ease-out;
+}
+
+.wholesaler-detail {
+  padding-bottom: var(--space-8);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Purchases List Styles (Card Layout) */
+.purchases-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+.purchase-card-wrapper {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  background: var(--color-bg-primary);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+  border: 1px solid var(--color-border);
+}
+
+.purchase-card-wrapper:hover,
+.payment-history-item.clickable:hover {
+  transform: translateY(-2px);
+  border-color: rgba(236, 201, 75, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.payment-history-date {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.payment-history-notes {
+  font-size: 0.8125rem;
+  color: var(--color-text-secondary);
+  margin-top: var(--space-1);
+  font-style: italic;
+  opacity: 0.8;
+}
+
+.payment-history-amount {
+  font-weight: 700;
+  color: var(--color-success);
+}
+
+.payment-history-amount.wholesaler {
+  color: var(--color-warning);
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  gap: var(--space-3);
+}

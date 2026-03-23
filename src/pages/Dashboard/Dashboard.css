@@ -1,0 +1,254 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.stats-grid {
+  margin-bottom: var(--space-4);
+}
+
+.stat-icon.primary {
+  background: var(--color-accent-gradient);
+  color: var(--color-btn-text);
+}
+
+.stat-icon.success {
+  background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+  color: #fff;
+}
+
+.stat-icon.warning {
+  background: linear-gradient(135deg, #ecc94b 0%, #d69e2e 100%);
+  color: #fff;
+}
+
+.stat-icon.info {
+  background: linear-gradient(135deg, #4299e1 0%, #3182ce 100%);
+  color: #fff;
+}
+
+.dashboard-section {
+  margin-bottom: var(--space-6);
+}
+
+.section-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: var(--space-4);
+  color: var(--color-text-secondary);
+}
+
+.quick-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+@media (max-width: 640px) {
+  .quick-actions {
+    flex-direction: column;
+  }
+  
+  .quick-actions .btn {
+    width: 100%;
+  }
+}
+
+.stat-card.clickable {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.stat-card.clickable:hover {
+  transform: translateY(-4px);
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  padding: var(--space-12);
+}
+
+/* Recent Sales */
+.recent-sales-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.recent-sale-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-3);
+  background: var(--color-bg-primary);
+  border-radius: var(--radius-md);
+}
+
+.sale-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.sale-customer {
+  font-weight: 500;
+  font-size: 0.75rem;
+}
+
+.sale-date {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.sale-amount {
+  font-weight: 600;
+  font-size: 0.75rem;
+  color: var(--color-success);
+}
+
+/* Low Stock */
+.low-stock-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.low-stock-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-3);
+  background: var(--color-bg-primary);
+  border-radius: var(--radius-md);
+}
+
+.product-name {
+  font-weight: 500;
+  font-size: 0.75rem;
+}
+
+.stock-count {
+  font-weight: 600;
+  font-size: 0.75rem;
+  color: var(--color-warning);
+}
+
+.stock-count.zero {
+  color: var(--color-error);
+}
+
+/* Dashboard 3-column grid */
+.dashboard-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 1024px) {
+  .dashboard-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .dashboard-grid .calendar-card {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 640px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+  .dashboard-grid .calendar-card {
+    grid-column: span 1;
+  }
+}
+
+/* Upcoming Notes */
+.upcoming-notes {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.note-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  background: var(--color-bg-primary);
+  border-radius: var(--radius-md);
+}
+
+.note-date-badge {
+  flex-shrink: 0;
+  padding: var(--space-2) var(--space-3);
+  background: var(--color-accent-gradient);
+  border-radius: var(--radius-md);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-active-text);
+  text-align: center;
+  min-width: 50px;
+}
+
+.note-details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  flex: 1;
+  min-width: 0;
+}
+
+.note-title {
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+.note-desc {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Small button */
+.btn-sm {
+  padding: var(--space-2) var(--space-3);
+  font-size: 0.75rem;
+}
+
+/* btn-success */
+.btn-success {
+  background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+  color: white;
+}
+
+.btn-success:hover:not(:disabled) {
+  filter: brightness(1.1);
+}
+
+/* Small empty state */
+.empty-state.small {
+  padding: var(--space-6);
+}
+
+.empty-state.small .empty-state-icon {
+  width: 32px;
+  height: 32px;
+  margin-bottom: var(--space-2);
+}
+
+.empty-state.small p {
+  font-size: 0.875rem;
+}

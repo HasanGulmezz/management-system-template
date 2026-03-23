@@ -1,0 +1,342 @@
+/* Theme System */
+
+/* 
+  Themes are now applied via data-theme attribute on the root element.
+  Example: <html data-theme="forest">
+*/
+
+/* --- THEME 1: DEFAULT (Deep Blue/Purple) --- */
+:root, [data-theme="default"] {
+  /* Colors */
+  --color-bg-primary: #0f0f23;
+  --color-bg-secondary: #1a1a2e;
+  --color-bg-tertiary: #16213e;
+  --color-bg-card: rgba(26, 26, 46, 0.8);
+  --color-bg-hover: rgba(255, 255, 255, 0.05);
+
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #a0aec0;
+  --color-text-muted: #718096;
+
+  --color-accent-primary: #667eea;
+  --color-accent-secondary: #764ba2;
+  --color-accent-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+  --color-success: #48bb78;
+  --color-warning: #ecc94b;
+  --color-error: #f56565;
+  --color-info: #4299e1;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 20px rgba(102, 126, 234, 0.3);
+
+  /* Border Radius */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+
+  /* Spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+
+  /* Typography */
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "Fira Code", monospace;
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+  --transition-slow: 350ms ease;
+  /* Button Text Global Default */
+  --color-btn-text: #ffffff;
+
+  /* Active State (Selected Tabs/Links) */
+  --color-active-bg: var(--color-accent-gradient);
+  --color-active-text: #ffffff;
+}
+
+
+/* --- THEME 2: FOREST (Dark Green/Earth) --- */
+[data-theme="forest"] {
+  --color-bg-primary: #0a1f1c;  
+  --color-bg-secondary: #112926; 
+  --color-bg-tertiary: #1d3b36;  
+  --color-bg-card: rgba(17, 41, 38, 0.85);
+  --color-bg-hover: rgba(255, 255, 255, 0.08);
+
+  --color-text-primary: #e2e8f0;
+  --color-text-secondary: #94a3b8;
+  --color-text-muted: #64748b;
+
+  --color-accent-primary: #10b981; 
+  --color-accent-secondary: #059669; 
+  --color-accent-gradient: linear-gradient(135deg, #10b981 0%, #059669 100%);
+
+  --color-success: #34d399;
+  --color-warning: #fbbf24;
+  --color-error: #f87171;
+  --color-info: #38bdf8;
+
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 20px rgba(16, 185, 129, 0.25);
+
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --radius-full: 9999px;
+
+  --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px;
+  --space-5: 20px; --space-6: 24px; --space-8: 32px; --space-10: 40px; --space-12: 48px;
+
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "Fira Code", monospace;
+
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+  --transition-slow: 350ms ease;
+}
+
+/* --- THEME 3: SUNSET (Dark Warm/Red) --- */
+[data-theme="sunset"] {
+  --color-bg-primary: #1a0b0b; 
+  --color-bg-secondary: #251010; 
+  --color-bg-tertiary: #361616;  
+  --color-bg-card: rgba(37, 16, 16, 0.85);
+  --color-bg-hover: rgba(255, 255, 255, 0.08);
+
+  --color-text-primary: #fff5f5;
+  --color-text-secondary: #fc8181; 
+  --color-text-muted: #c53030;    
+
+  --color-accent-primary: #ed8936; 
+  --color-accent-secondary: #c05621; 
+  --color-accent-gradient: linear-gradient(135deg, #ed8936 0%, #e53e3e 100%);
+
+  --color-success: #48bb78;
+  --color-warning: #ed8936;
+  --color-error: #f56565;
+  --color-info: #4299e1;
+
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.6);
+  --shadow-glow: 0 0 20px rgba(237, 137, 54, 0.25);
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px;
+  --space-5: 20px; --space-6: 24px; --space-8: 32px; --space-10: 40px; --space-12: 48px;
+
+  --font-sans: "Outfit", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "Fira Code", monospace;
+
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+  --transition-slow: 350ms ease;
+}
+
+/* --- THEME 4: OCEAN (Deep Teal/Cyan) --- */
+[data-theme="ocean"] {
+  --color-bg-primary: #041C32; 
+  --color-bg-secondary: #04293A; 
+  --color-bg-tertiary: #064663;  
+  --color-bg-card: rgba(4, 41, 58, 0.85);
+  --color-bg-hover: rgba(255, 255, 255, 0.08);
+
+  --color-text-primary: #ECB365;
+  --color-text-secondary: #9BA4B5; 
+  --color-text-muted: #d2d8e3;    
+
+  --color-accent-primary: #ECB365; 
+  --color-accent-secondary: #064663; 
+  --color-accent-gradient: linear-gradient(135deg, #ECB365 0%, #064663 100%);
+
+  --color-success: #48bb78;
+  --color-warning: #ecc94b;
+  --color-error: #f56565;
+  --color-info: #4299e1;
+
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 40, 0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 40, 0.4);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 40, 0.5);
+  --shadow-glow: 0 0 20px rgba(236, 179, 101, 0.2);
+
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+
+  --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px;
+  --space-5: 20px; --space-6: 24px; --space-8: 32px; --space-10: 40px; --space-12: 48px;
+
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "Fira Code", monospace;
+
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+  --transition-slow: 350ms ease;
+
+  --color-btn-text: #ffffff;
+}
+
+/* --- THEME 5: MINT (Light/Soft Green) --- */
+[data-theme="mint"] {
+  --color-bg-primary: #DCFCE7; /* More Visible Green (Green-100) */
+  --color-bg-secondary: #FAFAF9; /* Reduced White (Stone-50) */
+  --color-bg-tertiary: #bbf7d0; /* Green-200 */
+  --color-bg-card: rgba(255, 255, 255, 0.85);
+  --color-bg-hover: rgba(16, 185, 129, 0.15);
+
+  --color-text-primary: #14532D; /* Dark Green Text */
+  --color-text-secondary: #334155; /* Slate-700 */
+  --color-text-muted: #64748b;
+
+  --color-accent-primary: #10b981; /* Emerald 500 */
+  --color-accent-secondary: #059669; /* Emerald 600 */
+  --color-accent-gradient: linear-gradient(135deg, #10b981 0%, #059669 100%);
+
+  --color-success: #16a34a;
+  --color-warning: #ca8a04;
+  --color-error: #dc2626;
+  --color-info: #0284c7;
+
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-glow: 0 0 20px rgba(16, 185, 129, 0.15);
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-full: 9999px;
+
+  --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px;
+  --space-5: 20px; --space-6: 24px; --space-8: 32px; --space-10: 40px; --space-12: 48px;
+
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "Fira Code", monospace;
+
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+  --transition-slow: 350ms ease;
+
+  --color-btn-text: #ffffff;
+}
+
+/* --- THEME 6: RMINT (Reverse Mint - White Primary, Green Secondary) --- */
+[data-theme="rmint"] {
+  --color-bg-primary: #F0FDF4; /* Light Green (Mint-50) */
+  --color-bg-secondary: #DCFCE7; /* Visible Mint Green */
+  --color-bg-tertiary: #bbf7d0; /* Green-200 */
+  --color-bg-card: rgba(255, 255, 255, 0.95);
+  --color-bg-hover: rgba(16, 185, 129, 0.05);
+
+  --color-text-primary: #14532D; /* Dark Green Text */
+  --color-text-secondary: #475569; /* Slate Gray */
+  --color-text-muted: #94a3b8;
+
+  --color-accent-primary: #FFFFFF; /* WHITE Buttons */
+  --color-accent-secondary: #F8FAFC; /* Slate-50 */
+  --color-accent-gradient: linear-gradient(135deg, #FFFFFF 0%, #F1F5F9 100%);
+
+  --color-success: #16a34a;
+  --color-warning: #ca8a04;
+  --color-error: #dc2626;
+  --color-info: #0284c7;
+
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-glow: 0 0 20px rgba(0, 0, 0, 0.05);
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-full: 9999px;
+
+  --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px;
+  --space-5: 20px; --space-6: 24px; --space-8: 32px; --space-10: 40px; --space-12: 48px;
+
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "Fira Code", monospace;
+
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+  --transition-slow: 350ms ease;
+
+  --color-btn-text: #14532D; /* Dark Green Text for White Buttons */
+
+  --color-active-bg: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  --color-active-text: #ffffff;
+}
+
+/* --- THEME 7: MONOCHROME (Black/White/Gray) --- */
+[data-theme="monochrome"] {
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #f4f4f5; /* Zinc-100 */
+  --color-bg-tertiary: #e4e4e7;  /* Zinc-200 */
+  --color-bg-card: #ffffff;
+  --color-bg-hover: rgba(0, 0, 0, 0.05);
+
+  --color-text-primary: #18181b; /* Zinc-900 */
+  --color-text-secondary: #52525b; /* Zinc-600 */
+  --color-text-muted: #a1a1aa; /* Zinc-400 */
+
+  --color-accent-primary: #18181b; /* Zinc-900 / Black */
+  --color-accent-secondary: #27272a; /* Zinc-800 */
+  --color-accent-gradient: linear-gradient(135deg, #18181b 0%, #27272a 100%);
+
+  /* Semantic colors - keeping slightly desaturated or standard for visibility */
+  --color-success: #16a34a;
+  --color-warning: #ca8a04;
+  --color-error: #dc2626;
+  --color-info: #2563eb;
+
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-glow: 0 0 20px rgba(0, 0, 0, 0.1);
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+
+  --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px;
+  --space-5: 20px; --space-6: 24px; --space-8: 32px; --space-10: 40px; --space-12: 48px;
+
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "Fira Code", monospace;
+
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+  --transition-slow: 350ms ease;
+
+  --color-btn-text: #ffffff;
+
+  --color-active-bg: #18181b; /* Black background for active items */
+  --color-active-text: #ffffff; /* White text for active items */
+}

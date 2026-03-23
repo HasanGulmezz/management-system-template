@@ -1,0 +1,202 @@
+.wholesalers-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.page-subtitle {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  font-weight: 400;
+  margin-top: var(--space-1);
+}
+
+.wholesalers-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  align-items: center;
+}
+
+/* Tabs */
+.tabs-container {
+  overflow-x: auto;
+  padding-bottom: 2px;
+}
+
+.tabs {
+  display: inline-flex;
+  gap: var(--space-1);
+  background: var(--color-bg-secondary);
+  padding: var(--space-1);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+}
+
+.tab-btn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 0.5rem 1rem;
+  background: white;
+  border: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 8px; /* Matching Stock */
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.tab-btn:hover {
+  border-color: #3b82f6;
+  color: #3b82f6;
+}
+
+.tab-btn.active {
+  background: #3b82f6 !important; /* Explicit Blue from Stock */
+  color: white !important;
+  border-color: #3b82f6 !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  font-weight: 600;
+}
+
+.search-box {
+  position: relative;
+  flex: 1;
+  min-width: 250px;
+}
+
+.search-icon {
+  position: absolute;
+  left: var(--space-4);
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-muted);
+}
+
+.search-input {
+  padding-left: var(--space-10);
+}
+
+.wholesaler-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.wholesaler-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.wholesaler-card:hover {
+  transform: translateY(-2px);
+}
+
+.wholesaler-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-lg);
+  background: #27272a; /* Zinc 800 - Dark Grey */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wholesaler-avatar.has-debt {
+  background: linear-gradient(135deg, #fb923c 0%, #9a3412 100%); /* Richer Orange Gradient */
+}
+
+.wholesaler-info {
+  flex: 1;
+}
+
+.wholesaler-name {
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-1);
+}
+
+.wholesaler-contact {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+}
+
+.wholesaler-phone {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+.wholesaler-stats {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.wholesaler-purchases {
+  font-weight: 600;
+  color: var(--color-warning);
+}
+
+.wholesaler-arrow {
+  color: var(--color-text-muted);
+}
+
+.wholesaler-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  padding: var(--space-12);
+}
+
+.icon-btn {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: var(--color-bg-tertiary);
+  color: var(--color-text-secondary);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.icon-btn.danger {
+  color: var(--color-error);
+}
+
+.icon-btn.danger:hover {
+  background: rgba(245, 101, 101, 0.2);
+}
+
+.form-error {
+  background: rgba(245, 101, 101, 0.1);
+  border: 1px solid var(--color-error);
+  color: var(--color-error);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-4);
+  font-size: 0.875rem;
+}
+
+.wholesaler-info .wholesaler-stats {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  margin-top: var(--space-1);
+}

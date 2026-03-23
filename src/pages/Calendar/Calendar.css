@@ -1,0 +1,329 @@
+.calendar-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  height: calc(100vh - 120px);
+}
+
+/* Calendar Header - Sticky */
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.month-title {
+  font-size: 1.75rem;
+  font-weight: 300;
+  text-transform: capitalize;
+}
+
+.month-title span {
+  font-weight: 600;
+}
+
+.calendar-nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.nav-btn {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg-tertiary);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.nav-btn:hover {
+  background: var(--color-bg-card);
+  color: var(--color-text-primary);
+  border-color: var(--color-accent-primary);
+}
+
+.calendar-container {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: var(--space-4);
+  flex: 1;
+  min-height: 0;
+}
+
+@media (max-width: 900px) {
+  .calendar-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+  }
+}
+
+/* Calendar Card */
+.calendar-scroll-area {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Day Headers - Sticky */
+.calendar-days-header {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1px;
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  flex-shrink: 0;
+}
+
+.day-header {
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  padding: var(--space-2);
+}
+
+/* Calendar Weeks - Scrollable */
+.calendar-weeks {
+  flex: 1;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+.calendar-week {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1px;
+  border-bottom: 2px solid rgba(120, 120, 120, 0.5);
+}
+
+.calendar-week:last-child {
+  border-bottom: none;
+}
+
+/* Calendar Day */
+.calendar-day {
+  min-height: 70px;
+  padding: var(--space-2);
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  position: relative;
+}
+
+.calendar-day:hover {
+  background: rgba(102, 126, 234, 0.1);
+}
+
+.calendar-day.past-month {
+  opacity: 0.4;
+}
+
+.calendar-day.today {
+  background: rgba(102, 126, 234, 0.15);
+}
+
+.calendar-day.today .day-number {
+  color: var(--color-accent-primary);
+  font-weight: 700;
+}
+
+.calendar-day.selected {
+  background: rgba(102, 126, 234, 0.25);
+}
+
+.day-number {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-1);
+}
+
+/* Month label on first day of month */
+.month-label {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--color-text-secondary);
+  text-transform: capitalize;
+}
+
+/* Note indicators */
+.note-dots {
+  display: flex;
+  gap: 3px;
+  margin-top: auto;
+  padding-top: var(--space-1);
+}
+
+.note-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--color-accent-primary);
+  border-radius: var(--radius-full);
+}
+
+/* Notes Panel */
+.notes-panel {
+  display: flex;
+  flex-direction: column;
+  max-height: 100%;
+  overflow: hidden;
+}
+
+.notes-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: var(--space-3);
+}
+
+.notes-header h3 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Add Note Form */
+.add-note-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  background: var(--color-bg-tertiary);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-3);
+}
+
+.form-actions {
+  display: flex;
+  gap: var(--space-2);
+  justify-content: flex-end;
+}
+
+/* Notes List */
+.notes-list {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.note-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  background: var(--color-bg-tertiary);
+  border-radius: var(--radius-md);
+}
+
+.note-content {
+  flex: 1;
+}
+
+.note-content h4 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: var(--space-1);
+}
+
+.note-content p {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+}
+
+.icon-btn {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-md);
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.icon-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--color-text-primary);
+}
+
+.icon-btn.danger:hover {
+  background: rgba(245, 101, 101, 0.2);
+  color: var(--color-error);
+}
+
+.empty-notes {
+  padding: var(--space-8);
+  text-align: center;
+  color: var(--color-text-muted);
+}
+
+.empty-notes.centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.btn-sm {
+  padding: var(--space-2) var(--space-3);
+  font-size: 0.75rem;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  padding: var(--space-12);
+}
+
+/* Danger Zone Styles */
+.action-buttons.danger-zone {
+  margin-top: var(--space-8);
+  padding-top: var(--space-6);
+  border-top: 1px solid rgba(245, 101, 101, 0.3);
+}
+
+/* Floating Today Button */
+.floating-today-btn {
+  position: absolute;
+  bottom: var(--space-4);
+  right: var(--space-4);
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(102, 126, 234, 0.8);
+  border: none;
+  border-radius: var(--radius-full);
+  color: white;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  opacity: 0.7;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.floating-today-btn:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.calendar-scroll-area {
+  position: relative;
+}
