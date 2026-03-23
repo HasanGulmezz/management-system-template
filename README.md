@@ -40,8 +40,9 @@ npm run dev
 
 Sistemde dinamik renk teması özelliği mevcuttur. Aşağıdaki görseller varsayılan **Ocean** temasına aittir:
 
-![Dashboard](file:///Users/hasangulmez/.gemini/antigravity/brain/0085b19d-7322-4e35-8ae2-fbbb0ce69bac/dashboard_ocean_theme_1774280919508.png)
-![Müşteriler](file:///Users/hasangulmez/.gemini/antigravity/brain/0085b19d-7322-4e35-8ae2-fbbb0ce69bac/customers_page_ocean_1774280931466.png)
+![Dashboard](docs/dashboard.png)
+![Müşteriler](docs/customers.png)
+![Stok ve Depolar](docs/stock.png)
 
 ---
 
